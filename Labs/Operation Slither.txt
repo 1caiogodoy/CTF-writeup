@@ -1,0 +1,62 @@
+Platform: TryHackMe
+Room: Operation Slither
+
+This challenge simulated a data breach scenario in which attackers publicly announced the sale of a company's database (TryTelecomMe).
+The objective was to identify the threat actors involved by analyzing publicly available information and correlating digital footprints across multiple platforms.
+The investigation started with the following public message:
+
+"
+Full user database TryTelecomMe on sale!!!
+As part of Operation Slither, we've been hiding for weeks in 
+their network and have now started to exfiltrate information. 
+This is just the beginning.
+We'll be releasing more data soon. Stay tuned!
+@v3n0mbyt3_
+---
+"
+While reviewing the activity of v3n0mbyt3_, i find him on Threads, where I noticed a reply directed to a single account, _myst1cv1x3n_.
+That account posted an encoded message.
+The format strongly suggested Base64 encoding. 
+Decoding it, the first flag appers.
+
+Following to the next message, the second part of the lab:
+
+"
+60GB of data owned by TryTelecomMe is now up for bidding!
+Number of users: 64500000 Accepting all types of crypto
+For takers, send your bid on Threads via this handle:
+HIDDEN CONTENT 
+-----------------------------------------------------------------------------------------------------
+
+You must register or log in to view this content
+"
+
+Identify that this account have an Instagram.
+Analysing it posts, we can find a link to soundcloud.
+At the second track of it soundcloud account, have another Base64 enconding.
+Deconding it, the second flag appers.
+
+The third and last massage:
+
+"
+FOR SALE
+Advanced automation scripts for phishing and initial access!
+Inclusions:- Terraform scripts for a resilient phishing infrastructure 
+- Updated Google Phishlet (evilginx v3.0)- GoPhish automation scripts
+- Google MFA bypass script- Google account enumerator
+- Automated Google brute-forcing script
+- Cobalt Strike aggressor scripts
+- SentinelOne, CrowdStrike, Cortex XDR bypass payloads
+PRICE: $1500
+Accepting all types of crypto
+Contact me on REDACTED@protonmail.com 
+--
+"
+
+A third person comes out.
+Looking at the earlier SoundCloud, we found out an account who interacts a lot with that track, the sh4d0wF4NG.
+After searching the alias sh4d0wF4NG, I located a GitHub profile.
+After that, explore the repositories and commit history was the only way.
+Analysing everything, a deleted file appers at the history commit from another file.
+Within the deleted file, another Base64 string was discovered.
+Decoded, it brings the final flag.
