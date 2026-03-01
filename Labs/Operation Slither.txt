@@ -1,5 +1,6 @@
 Platform: TryHackMe
 Room: Operation Slither
+OSINT
 
 This challenge simulated a data breach scenario in which attackers publicly announced the sale of a company's database (TryTelecomMe).
 The objective was to identify the threat actors involved by analyzing publicly available information and correlating digital footprints across multiple platforms.
